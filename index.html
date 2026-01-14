@@ -1,11 +1,77 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InnerLing Prototype</title>
-  </head>
-  <body>
-    InnerLing Prototype is running.
-  </body>
-</html>
++<!doctype html>
++<html lang="zh-Hans" data-theme="dark">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>InnerLing</title>
++    <link
++      rel="preconnect"
++      href="https://fonts.googleapis.com"
++    />
++    <link
++      rel="preconnect"
++      href="https://fonts.gstatic.com"
++      crossorigin
++    />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&family=Noto+Sans+TC:wght@400;500&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <div class="page" role="presentation">
++      <header class="topbar">
++        <div class="logo" aria-label="InnerLing logo">
++          <img src="/assets/logo.svg" alt="InnerLing" />
++          <span class="logo-fallback-text">InnerLing</span>
++        </div>
++        <nav class="top-actions ui-text">
++          <div class="dropdown" data-dropdown>
++            <span class="dropdown-trigger" data-action="toggle-theme" tabindex="0" role="button">
++              <span data-i18n="themeLabel">暗色</span>
++            </span>
++            <div class="dropdown-menu" data-menu>
++              <span class="dropdown-item" data-theme-value="light" data-i18n="themeOptionLight">亮色</span>
++            </div>
++          </div>
++          <div class="dropdown" data-dropdown>
++            <span class="dropdown-trigger" data-action="toggle-language" tabindex="0" role="button">
++              <span data-i18n="languageLabel">中文简体</span>
++            </span>
++            <div class="dropdown-menu" data-menu>
++              <span class="dropdown-item" data-lang="zh-Hant">中文繁体</span>
++              <span class="dropdown-item" data-lang="en">English</span>
++            </div>
++          </div>
++          <span class="nav-item" data-i18n="login">登录</span>
++          <span class="nav-item" data-i18n="startWithGoogle">使用 Google 开始</span>
++        </nav>
++      </header>
++
++      <main class="center-content">
++        <div class="slogan-block">
++          <p class="slogan" data-i18n="slogan">让语言，从心里长出来。</p>
++          <p class="subtitle" data-i18n="subtitle">InnerLing 不教语言，而是提供一个语言可以自然生长的空间。</p>
++        </div>
++        <span class="listen-link" data-action="listen" data-i18n="listen">点击这里，先听听看。</span>
++        <p class="response-text" data-i18n="response">
++          这是一个可以慢慢说话的地方，如果愿意，可以说说看。
++        </p>
++        <div class="mic-placeholder">MIC</div>
++      </main>
++
++      <footer class="footer ui-text">
++        <span class="copyright">©2026 InnerLing. All rights reserved.</span>
++        <div class="footer-links">
++          <a href="#" class="footer-link" data-i18n="privacy">隐私政策</a>
++          <a href="#" class="footer-link" data-i18n="terms">服务条款</a>
++          <a href="#" class="footer-link" data-i18n="cookies">Cookie设置</a>
++        </div>
++      </footer>
++    </div>
++
++    <audio id="voice" src="/assets/voice.mp3" preload="auto"></audio>
++    <script src="app.js"></script>
++  </body>
++</html>
