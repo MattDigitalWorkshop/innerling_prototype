@@ -1,27 +1,23 @@
 # InnerLing Prototype
 
-A single-screen, framework-free landing prototype for InnerLing, designed to run directly on GitHub Pages.
+A minimal static web prototype.
 
-## Preview (GitHub Pages)
+## Run locally
 
-After enabling GitHub Pages for this repository, open:
+1. Start a simple static file server from the repo root:
 
-```
-https://<your-github-username>.github.io/innerling_prototype/
-```
+   ```bash
+   python3 -m http.server 8000
+   ```
 
-> Replace `<your-github-username>` with your GitHub username or organization.
+2. Open the page in your browser:
 
-## Run locally (optional)
+   ```
+   http://localhost:8000/index.html
+   ```
 
-From the repo root:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open:
+You should see:
 
 ```
-http://localhost:8000/index.html
+InnerLing Prototype is running.
 ```
